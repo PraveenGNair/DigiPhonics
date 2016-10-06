@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-content>
+     <ion-header-bar align-title="center" style=" background: linear-gradient(45deg, #4fa49a, #4361c2);" >
+  <div>
+    <a href="#/viewVehicle" ><span>  <i style="color:#fff"; class="icon ion-arrow-left-c"></i></span></a>
+  </div>
+  <h1 class="title" ><img style="width: 50%; height: 100%;    " src="img/DigitEyes-logo-transparent.png " alt=""></h1>
+  
+
+</ion-header-bar>
+    	<section id="mapshow" class="main style1 login-style1 special" >
+    	<div class="container" style="height:60vh;">
+					<header class="major"    style="padding-top: 20px;">
+						<h2 style="color:#fff;">TracK Vehicle</h2>
+					</header>
+					<a ng-click="drawMap()" ng-init="init()" style="cursor:pointer;"> <p style="color:#fff;"><u>Tap Here For Route Details</u></a>
+					
+					<div id="map" data-tap-disabled="true"></div>	
+							
+					
+				</div>
+
+        </section>
+    </ion-content>
+</ion-view>

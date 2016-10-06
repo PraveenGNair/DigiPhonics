@@ -1,0 +1,40 @@
+<ion-view title="Login" >
+    <ion-content>
+   <ion-header-bar align-title="center" style=" background: linear-gradient(45deg, #4fa49a, #4361c2);" >
+  <div>
+   <a  href="#/welcome"> <span >  <i style="color:#fff"; class="icon ion-arrow-left-c"></i></span></a>
+  </div>
+  <h1 class="title" ><img style="width: 50%; height: 100%;    " src="img/DigitEyes-logo-transparent.png " alt=""></h1>
+  
+
+</ion-header-bar>
+        <section id="one" class="main style1 login-style1">
+                <div class="container">
+                    <div class="row 150%">
+                        
+                        <div class="6u$ 12u$(medium) important(medium)">
+                            <!--<img src="images/vinscanner.jpg" width="100%" height="100%" style="border:2px solid #FFF; height:40vh;">-->
+                            <div class="login-group" style="background-color:#FFF;">
+                            
+                           <!--  <h2 style="font-weight:bold; color:#7ea251; text-align:left;">Sign In</h2> -->
+                    <div class="item-input item-icon-right" style="margin-bottom:10px;">
+                        
+                        <input type="text" class="form-control" placeholder="Username" ng-model="data.username">
+                       <i class="icon ion-android-person"></i>
+                    </div>
+                    <div class="item-input item-icon-right" style="margin-bottom:10px;">
+                        
+                        <input type="password" class="form-control" placeholder="Password" ng-model="data.password">
+                          <i class="icon ion-eye"></i>
+                    </div>
+                    <div class="form-group login-group-checkbox" style="text-align:left;padding-left: 1em;">
+                        <a class="login-btn" ng-click="login(data)">Sign In</a>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </ion-content>
+</ion-view>
+

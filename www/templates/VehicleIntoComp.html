@@ -1,0 +1,96 @@
+<ion-view title="Record Vehicle Into Commpound" id="page4" class=" ">
+    <ion-content>
+ 
+<section id="four" class="main style1 special" style="height:100vh;">
+        <div class="container">
+          <header class="major">
+            <h2>Record Vehicle into a Compound</h2>
+          </header>
+
+ <div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Compound
+    </div> 
+    <select  ng-options="compound.description for compound  in allcompounds" ng-model="comp">
+   <option value=""  selected disabled>-- Select an option--</option>
+    </select>
+    </div>
+  </label>
+
+</div>
+
+          <p>Please click below to scan.</p>
+          <div class="row 150%">
+            <div class="4u 12u$(medium)">
+              <span class="image fit" ng-disabled="recordData.length=='5'" ng-click="scanRecordBarcode()"><img src="img/scan-please.png"  alt="" style="width:45%; margin:0px auto;"/></span>
+              <div ><!-- <h3 style="color:#9dc66b; font-weight:400;">Successfully Scanned!</h3> -->
+             
+            <div ng-show="visibleRecord">
+              <table style="border:1px solid #c4c4c4;" >
+                <thead>
+                  <tr>
+                    <td><strong>Scanned VIN</strong></td>
+                    <td><strong>Compound</strong></td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="item in recordData">
+                    <td>{{item}}</td>
+                    <td>{{comp}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+              <ul class="actions" ng-disabled="recordData.length<5">
+                <li><a ng-click="insertIntoComp(recordData,comp)" class="login-btn">Get Vehicle In Compound</a></li>
+              </ul>
+              </div>
+              
+            </div>
+              
+          </div>
+          
+      </section>
+ 
+
+
+
+
+  
+
+
+       <!-- <a style="font-weight:300;" class=" button button-positive  button-block icon-left ion-android-add-circle " ng-click="scanBarcode()">Scan</a>
+ 
+       <div class="table1"  ng-show="showvisible">
+        <form class="list">
+            <label class="item item-input ">
+                <input type="text" ng-model="vin" placeholder="Scanned VIN.."/>
+            </label>
+              <label class="item item-input ">
+                <input type="text" placeholder="BarFormat.." ng-model="barFormat" />
+          </label>
+             <button  class=" button button-positive  button-block " ng-click="eventABS(vin,barFormat)">Create Event ABS</button>
+        </form>
+        </div>
+ 
+ <button  class=" button button-positive  button-block " ng-show="visibililty" ng-click="load()">View Scanned VINs</button>
+
+
+        <div class="table2" ng-show="visibililtyData">
+          <div class="row">
+            <div class="col col-50">Scanned VIN</div>
+            <div class="col col-50">Created Event</div>
+          </div>
+          <div class="row" style="overflow:y;" ng-repeat="item in alldata">
+            <div class="col col-50">{{item.shortvin}}</div>
+            <div class="col col-50">{{item.event}}</div>
+          </div>
+          </div>
+          -->
+      
+    </ion-content>
+</ion-view>

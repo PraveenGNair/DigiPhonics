@@ -1,0 +1,64 @@
+ <ion-header-bar align-title="center" style=" background: linear-gradient(45deg, #4fa49a, #4361c2);" >
+  <div>
+    <a  href="#/CreateABS"> <span >  <i style="color:#fff"; class="icon ion-arrow-left-c"></i></span></a>
+  </div>
+  <h1 class="title" ><img style="width: 50%; height: 100%;    " src="img/DigitEyes-logo-transparent.png " alt=""></h1>
+  
+
+</ion-header-bar>
+<section id="view-ABS" class="main style1 login-style1 special" style="height:100vh;">
+				<div >
+							<p style="margin-bottom:1em; color:#fff;padding-top: 20px;">You can view the scanned VIN and created Events by clicking below:</p>
+							<ul class="actions">
+								<li><a class="login-btn" ng-click="load()">View Events</a></li>
+							</ul>
+							</div>
+				<div class="container">
+					
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							
+					
+        				<!--<div class="row header" style="border:1px solid #c4c4c4;">
+				          <div class="col">Scanned VIN</div>
+				          <div class="col">Created Events</div>
+				          <div class="col">Map</div>
+				        </div>
+				        <div class="row" ng-repeat="item in alldata" style="border:1px solid #c4c4c4;">
+				          <div class="col">{{item.shortvin}}</div>
+				          <div class="col">{{item.event}}</div>
+				          <div class="col"><ion-icon name="location" ng-click = "getMapLocation()"></ion-icon></div>
+				        </div> -->
+				   
+							<div style="overflow-y:auto; height:60vh;">
+
+ 							<table style="border:1px solid #c4c4c4;" ng-show="visibililtyData">
+								<thead>
+									<tr>
+										<th><strong style="color:#fff;">Scanned VIN </strong></th>
+										<th><strong style="color:#fff;">Created Events</strong></th>
+										<th><strong style="color:#fff;">Location</strong></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr   ng-repeat="item in alldata" style="color:#fff;">
+										<td style="color:#fff; word-break:break-all;">{{item.shortvin}}</td>
+										<td style="color:#fff; word-break:break-all;">{{item.event}}</td>
+										<td  style="color:#fff; word-break:break-all;"><a ng-click = "getMapLocation()"><img src="img/map_icon.png"  alt="" style="height:6%; "/></a></td>
+									</tr>	
+									<!-- <tr class="row" ng-repeat="item in alldata" style="color:#fff;">
+										<td class="col"><span style="color:#fff;">{{item.shortvin}}</span></td>
+										<td class="col"><span style="color:#fff;">{{item.event}}</span></td>
+										<td class="col"><ion-icon name="location" ng-click = "getMapLocation()"></ion-icon></td>
+									</tr>--> -->
+								</tbody>
+							</table>
+							</div>
+							<!--<div id="map" data-tap-disabled="true"></div>-->
+						</div>
+							
+						</div>
+							
+					</div>
+				
+</section>

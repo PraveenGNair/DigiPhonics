@@ -1,0 +1,106 @@
+<ion-view title="Scan VIN" id="page3" class=" ">
+    <ion-content >
+ <ion-header-bar align-title="center" style=" background: linear-gradient(45deg, #4fa49a, #4361c2);" >
+  <div>
+  <a  href="#/dashboard"> <span >  <i style="color:#fff"; class="icon ion-arrow-left-c"></i></span></a>
+  </div>
+  <h1 class="title" ><img style="width: 50%; height: 100%;" src="img/DigitEyes-logo-transparent.png " alt=""></h1>
+  
+
+</ion-header-bar>
+<section id="three" class="main style1 login-style1 special" >
+				<div class="container" style="padding-top:29px";>
+					<header class="major">
+						<h2 style="color:#fff;">Check Vehicle Details!</h2>
+					</header>
+					<p style="color:#fff;margin:-10px">Please click below to scan.</p>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							
+							<span class="image fit" ng-click="scanBarcode()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/scan-please.png"  alt="" style="width:29%; margin:0px auto;"/></span>
+							<!-- ng-show="showvisible" --><div ng-show="showvisible"><h3 style="color:#9dc66b; font-weight:400;margin:0px;">Successfully Scanned!</h3>
+							<input type="text" placeholder="Scanned Data" style="background-color:#fff; text-align:center;" ng-model="vin"></input>
+							<br/>
+<h3 style="color:#9dc66b; font-weight:400;margin:0px;">Scanned  Details</h3>
+
+							<div class="col" style="overflow-y:auto; height:30vh;width:90%;border:thin;">
+<table>
+<div class="row">
+  <div class="col col-80" ><b style="color:#fff;">Order Number</b></div>
+  <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.orderNumber}}</div>
+  </div>
+
+  <div class="row">
+   <div class="col col-80" ><b style="color:#fff;">Vin</b></div>
+   <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.VIN}}</div>
+
+   </div>
+
+   <div class="row">
+    <div class="col col-80"  ><b style="color:#fff;">Status</b></div>
+      <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.status}}</div>
+      </div>
+
+      <div class="row">
+    <div class="col col-80" ><b style="color:#fff;">Model</b></div>
+  <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.model}}</div>
+    </div>
+
+    <div class="row">
+
+     <div class="col col-80"><b style="color:#fff;">Derivative</b></div>
+       <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.derivative}}</div>
+       </div>
+
+       <div class="row">
+      <div class="col col-80"><b style="color:#fff;">Destination</b></div>
+        <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.destination}}</div>
+      </div>
+        <div class="row">
+      <div class="col col-80"><b style="color:#fff;">Country</b></div>
+        <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.country}}</div>
+      </div>
+        <div class="row">
+      <div class="col col-80"><b style="color:#fff;">Dealer</b></div>
+        <div class="col col-50"  style="color:#fff;">{{displayVehicleDetails.dealer}}</div>
+      </div>
+        <div class="row">
+      <div class="col col-80"><b style="color:#fff;">Drop Point</b></div>
+        <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.dropPoint}}</div>
+      </div>
+
+         <div class="row">
+      <div class="col col-80"><b style="color:#fff;">Build Date</b></div>
+        <div class="col col-80" style="color:#fff;">{{displayVehicleDetails.buildDate}}</div>
+      </div>
+         <div class="row">
+      <div class="col col-80"><b style="color:#fff;">CPD</b></div>
+        <div class="col col-80"  style="color:#fff;">{{displayVehicleDetails.CPD}}</div>
+      </div>  
+</table>
+</div>
+
+
+					</div>
+							
+						</div>
+							
+					</div>
+				</div>
+
+			</section>
+			
+</ion-content>
+
+ <div class="bar bar-footer " ng-show="showvisible">
+<!--  <ul class="actions">
+								<li><a ng-click="eventABS(vin)" class="login-btn pull-right">Create ABS</a></li>
+							</ul> -->
+ <button ng-click="eventABS(vin)"  style="text-transform: none;"class="button login-btn pull-right">Create ABS</button></li>
+							
+ <!--  <button class="button button-clear pull-right">Right</button>
+ -->
+</div>
+ 	<!-- 						
+	 -->						
+</ion-view>
